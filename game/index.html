@@ -1,0 +1,57 @@
+<!doctype html>
+<!-- CLEAR TO LAND — you are the tower at Kestrel Field. Draw each plane's route
+     home: click a plane, drag its path, stack the three altitude bands, land
+     arrivals on the cone, launch departures out their gates. WIN: hold the
+     field through all 9 shifts, the last against THE GALE WALL. LOSE: three
+     incidents close the field. Tech: fixed-step deterministic simulation in
+     plain scripts (no library, no network), seeded streams, WebAudio synth,
+     canvas chart rendering. The sim modules are DOM-free and replay headlessly
+     in Node; tools verify determinism and stage the screenshots from real
+     sampled ticks of bot-flown runs. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clear to Land — a tower game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="1280" height="800"></canvas>
+  <div id="menu-root"></div>
+</div>
+<script src="src/rng.js"></script>
+<script src="src/config.js"></script>
+<script src="src/field.js"></script>
+<script src="src/planes.js"></script>
+<script src="src/weather.js"></script>
+<script src="src/conflicts.js"></script>
+<script src="src/orders.js"></script>
+<script src="src/traffic.js"></script>
+<script src="src/draft.js"></script>
+<script src="src/feats.js"></script>
+<script src="src/save.js"></script>
+<script src="src/audio.js"></script>
+<script src="src/sim.js"></script>
+<script src="src/bot.js"></script>
+<script src="src/titledemo.js"></script>
+<script src="src/render/layout.js"></script>
+<script src="src/render/fit.js"></script>
+<script src="src/render/icons.js"></script>
+<script src="src/render/terrain.js"></script>
+<script src="src/render/routes.js"></script>
+<script src="src/render/planes.js"></script>
+<script src="src/render/weatherfx.js"></script>
+<script src="src/render/fx.js"></script>
+<script src="src/render/banner.js"></script>
+<script src="src/render/hud.js"></script>
+<script src="src/render/title.js"></script>
+<script src="src/render/draft.js"></script>
+<script src="src/render/results.js"></script>
+<script src="src/render/almanac.js"></script>
+<script src="src/render/howto.js"></script>
+<script src="src/input.js"></script>
+<script src="src/testhook.js"></script>
+<script src="src/main.js"></script>
+</body>
+</html>
